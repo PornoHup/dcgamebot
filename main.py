@@ -28,8 +28,8 @@ K_G = Client(
 
 # Start Buttonu İcin Def Oluşturalım :)
 def button():
-	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻 Sahibim ",url="t.me/TheZahid")]]
-	BUTTON+=[[InlineKeyboardButton(text="📣 Yeniliklər",url="t.me/GraphsBots")]]
+	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻 Yaradıcım ",url="t.me/Thagiyevvvv")]]
+	BUTTON+=[[InlineKeyboardButton(text="📣 Botun Yenilikləri",url="t.me/RiyaddBlog")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 # Kullanıcı Start Komutunu Kullanınca Selam'layalım :)
@@ -37,7 +37,7 @@ def button():
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
 
-	await message.reply_text(text="**🙋🏻‍♂️ Salam {}!**\n\n__Mən [Zahid](https://t.me/TheZahid) tərəfindən tərcümə edilmiş doğruluq-cəsarət botuyam :)__\n\n**Əlavə məlumat üçün => /komek** ".format(
+	await message.reply_text(text="**🇦🇿🐊 Salam {}!**\n\n__Mən [Zahid](https://t.me/Thagiyevvvv) tərəfindən yaradılmış doğruluq-cəsarət botuyam :)__\n\n**Əlavə məlumat üçün => /help** ".format(
 		user.mention, # Kullanıcı'nın Adı
 		),
 	disable_web_page_preview=True, # Etiketin Önizlemesi Olmaması İcin Kullanıyoruz
@@ -50,28 +50,28 @@ def d_or_c(user_id):
 	BUTTON += [[InlineKeyboardButton(text="💪🏻 Cəsarət", callback_data = " ".join(["c_data",str(user_id)]))]]
 	return InlineKeyboardMarkup(BUTTON)
 # Help komandasını əlavə edək
-@K_G.on_message(filters.command("zahid"))
+@K_G.on_message(filters.command("Riyad"))
 async def _(client, message):
 	user = message.from_user
 
-	await message.reply_text(text="{} Məni tərcümə edən[Zahid](https://t.me/TheZahid) Təşəkkür edirəm".format(user.mention),
+	await message.reply_text(text="{} Məni tərcümə edən[Riyad](https://t.me/Thagiyevvvv) Təşəkkür edirəm".format(user.mention),
 		)
 
-@K_G.on_message(filters.command("komek"))
+@K_G.on_message(filters.command("help"))
 async def _(client, message):
 	user = message.from_user
 
 	await message.reply_text(text="{} Botumuzdan istifadə etdiyin üçün təşəkkürlər👻!\n\nOyunu başlatmaq üçün- /basla\nSual əlavə etmək üçün- /artir".format(user.mention),
 		)
-@K_G.on_message(filters.command("artir"))
+@K_G.on_message(filters.command("dogruluq"))
 async def _(client, message):
 	user = message.from_user
 
-	await message.reply_text(text="**{} [Ayxan](https://t.me/Ayxxan) tərəfindən yoxlanıldıqdan sonra artırılacaq.😉**".format(user.mention),
+	await message.reply_text(text="**{} [Riyadd](https://t.me/Thagiyevvvv) tərəfindən yoxlanıldıqdan sonra artırılacaq.😉**".format(user.mention),
 		)
 
 	# Dc Komutunu Oluşturalım
-@K_G.on_message(filters.command("basla"))
+@K_G.on_message(filters.command("b"))
 async def _(client, message):
 	user = message.from_user
 
@@ -116,7 +116,7 @@ async def _(client, callback_query):
 
 ############################
     # Sudo islemleri #
-@K_G.on_message(filters.command("cartir"))
+@K_G.on_message(filters.command("cesaret"))
 async def _(client, message):
   global MOD
   user = message.from_user
